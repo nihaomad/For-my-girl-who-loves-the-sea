@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#3a0d18">
+  <title>Open When Letters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Pinyon+Script&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Peony bloom splash ===== -->
+<div class="splash" id="splash" aria-hidden="true">
+  <p class="splash-line"><span id="splashName">for Kazel</span></p>
+</div>
+<div class="logo" id="logo" aria-hidden="true"><svg viewBox="-60 -60 120 120" id="logoSvg"></svg></div>
+
+<!-- ===== Scene 1: the question gate ===== -->
+<section class="scene" id="gate" hidden>
+  <div class="eyebrow">just for you, Kazel</div>
+  <h1>Before you come in…</h1>
+  <form class="gate-form" id="gateForm" autocomplete="off">
+    <label for="answer">What's the name of our go-to place where we pick up food and eat somewhere?</label>
+    <input id="answer" name="answer" type="text" placeholder="type it here" aria-describedby="gateMsg">
+    <button class="btn" type="submit">Open the door</button>
+    <p class="msg" id="gateMsg" role="status"></p>
+  </form>
+</section>
+
+<!-- ===== Scene 2: the sea ===== -->
+<section class="sea" id="sea" hidden aria-label="The sea">
+  <canvas id="seaCanvas" aria-hidden="true"></canvas>
+  <video id="seaVideo" playsinline muted preload="auto" hidden></video>
+  <audio id="seaSong" preload="auto"></audio>
+  <div class="veil"></div>
+  <div class="copy">
+    <div class="eyebrow">for the girl who loves the sea</div>
+    <h2>Take a breath, Kazel.</h2>
+  </div>
+  <div class="controls">
+    <button class="ghost" id="soundBtn" hidden>Sound on</button>
+    <button class="btn" id="seaNext" hidden>Continue</button>
+  </div>
+</section>
+
+<!-- ===== Scene 3: the sealed letter ===== -->
+<section class="scene" id="intro" hidden>
+  <div class="stage" id="stage">
+    <button class="sealed" id="sealed" aria-label="Open the letter">
+      <span class="env-back"></span>
+      <span class="paper"></span>
+      <span class="pocket"></span>
+      <span class="flap"></span>
+      <span class="wax">K</span>
+    </button>
+  </div>
+  <p class="tap-hint" id="tapHint">tap to open</p>
+  <article class="intro-letter" id="introLetter" hidden>
+    <p class="to">My Kazel,</p>
+    <p class="typed" id="typed" aria-live="polite"></p>
+    <button class="btn" id="enterBtn" hidden>Come in</button>
+  </article>
+</section>
+
+<!-- ===== Scene 4: the envelope wall ===== -->
+<section class="scene" id="wall" hidden>
+  <audio id="wallSong" preload="auto" loop></audio>
+  <button class="ghost sound-toggle" id="wallSound" aria-pressed="false" hidden>♪ Sound on</button>
+  <h2>How's your heart today?</h2>
+  <p class="lede">Pick the envelope that matches. You can open them as many times as you need.</p>
+  <div class="wall" id="envelopes"></div>
+  <p class="foot">Made with love by Deep, for Kazel only.</p>
+</section>
+
+<div class="overlay" id="overlay" hidden>
+  <article class="letter" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+    <button class="close" id="closeBtn" aria-label="Close letter">×</button>
+    <h3 id="letterTitle"></h3>
+    <div id="letterBody"></div>
+    <p class="sign">— Deep</p>
+  </article>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
