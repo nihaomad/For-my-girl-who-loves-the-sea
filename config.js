@@ -50,7 +50,7 @@ const LETTERS = [
     body:[
       "Here it is, in writing, so you can read it as many times as you want.",
       "I love you Ms. Kazel 'Faye' Morales Olaño, my babyy. I'm not going anywhere po ah. You are not too much, and you are always enough. I love you and ikaw lang ang pipiliin ko sa araw-araw na gagawin ng Diyos",
-      "If you need reassurance, baby wag ka mahiya na sabihan ako and I'll tell you even if it a hundred times and whenever you wonder if I still feel the same, come back to this letter. The answer will always be yes."
+      "If you need reassurance, baby, wag kang mahiyang sabihin sa 'kin, and I'll tell you even if it takes a hundred times. And whenever you wonder if I still feel the same, come back to this letter. The answer will always be yes."
     ]},
   { key:"miss", feel:"you miss me", tint:"#f0bfc6", title:"Open when you miss me",
     body:[
