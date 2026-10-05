@@ -153,7 +153,10 @@ p{margin:0}
 @keyframes unfold{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
 .letter h3{font-family:var(--script);font-weight:400;font-size:2.1rem;color:var(--burgundy);margin:0 0 12px;line-height:1.1}
 .letter p{margin:0 0 14px;font-size:1.12rem;line-height:1.75}
-.letter .sign{font-family:var(--script);font-size:1.8rem;color:var(--burgundy);text-align:right;margin-top:8px}
+/* Formal sign-off: closing line, then the name beneath it, set to the right */
+.letter .sign{display:flex;flex-direction:column;align-items:flex-end;gap:2px;margin:20px 0 0}
+.letter .sign .closing{font-family:var(--body);font-style:italic;font-size:1.12rem;color:var(--ink)}
+.letter .sign .name{font-family:var(--script);font-size:2rem;line-height:1.1;color:var(--burgundy)}
 .close{position:absolute;top:10px;right:12px;background:none;border:0;font-size:1.6rem;color:var(--burgundy);line-height:1}
 .foot{color:var(--muted);font-size:.95rem;font-style:italic}
 
